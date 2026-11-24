@@ -1,30 +1,46 @@
-# Implement Collabcode Prompts
+# CollabCode
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A collaborative development platform where teams write code together in real time, with an AI assistant, chat and meetings in one workspace.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/priyanshus-projects-61ab6498/v0-implement-collabcode-prompts)
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/boatnIretzv)
 
-## Overview
+> **Status:** front-end prototype. The screens and interactions are built, but there is no backend yet. Sign-in and team data are kept in the browser's `localStorage`, and some views use sample data.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Features
 
-## Deployment
+- **Landing page** introducing the platform
+- **Auth screens:** sign in, sign up and forgot password, plus an onboarding flow
+- **Workspace:** code editor, file explorer, terminal and console, live preview, design canvas, and chat and meeting panes side by side
+- **AI assistant** page and an in-workspace AI helper
+- **Dashboard, teams, messages, analytics, docs, support and settings** pages
 
-Your project is live at:
+## Tech stack
 
-**[https://vercel.com/priyanshus-projects-61ab6498/v0-implement-collabcode-prompts](https://vercel.com/priyanshus-projects-61ab6498/v0-implement-collabcode-prompts)**
+- Next.js 15 (App Router), React 19, TypeScript
+- Tailwind CSS, shadcn/ui (Radix UI), lucide-react icons
+- Framer Motion for animation
 
-## Build your app
+## Getting started
 
-Continue building your app on:
+```bash
+pnpm install
+pnpm dev
+```
 
-**[https://v0.dev/chat/projects/boatnIretzv](https://v0.dev/chat/projects/boatnIretzv)**
+Then open http://localhost:3000.
 
-## How It Works
+## Project structure
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```
+app/          routes: auth, onboarding, dashboard, workspace, teams, messages, ai-assistant, analytics, docs, support, settings
+components/   workspace panes (editor, terminal, preview, chat, meeting, canvas), dashboard, modals and shadcn/ui components
+hooks/, lib/  shared hooks and utilities
+```
+
+## v0 sync
+
+This repository was created with [v0.dev](https://v0.dev) and can be kept in sync with the v0 project. Changes deployed from v0 are pushed here, and Vercel deploys the latest commit.
+
+## License
+
+[MIT](LICENSE)
